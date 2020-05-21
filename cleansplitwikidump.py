@@ -6,7 +6,7 @@
 # - removing punctuation, digits, and <br> tags from the edges of each word
 # - omitting words altogether if they still contain any of the above
 # - omitting any duplicate words
-# - writing the remaining/cleaned words, one per line, to the file "cleanedwikiwords.txt"
+# - writing the remaining/cleaned words, one per line, to the file "cleanedwikiwords_<date>_<time>.txt"
 
 # This is intended to be run from within the text/ directory
 # that is created by WikiExtractor.py
