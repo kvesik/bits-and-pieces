@@ -1,9 +1,7 @@
 # bits-and-pieces
 ## various cleaning/organizing utilities
 
-```
-cleansplitwikidump.py
-```
+[**cleansplitwikidump.py**]()
 Additional cleaning to follow use of [WikiExtractor](https://github.com/attardi/wikiextractor). This script reads all of the output from WikiExtractor.py and cleans/reorganizes it by:
 - removing the <doc></doc> tags (and their contents) at the beginning and end of each article
 - lowercasing each word
