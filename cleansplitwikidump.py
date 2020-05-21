@@ -29,7 +29,6 @@ def cleanandsplit(srcpath, destpath):
             while len(sline) > 0:
                 if not sline.startswith("<doc") and not sline.startswith("</doc"):
                     wds = sline.split()
-                    #numwdstotal += len(wds)
                     for w in wds:
                         cleaned = clean(w.lower())
                         if len(cleaned)>0 and cleaned not in uniquewds:
@@ -56,11 +55,10 @@ def clean(word):
                 
 # iterate through AA, AB, AC, ... directories and clean each of their wiki_00, wiki_01, wiki_02 files
 contents = os.listdir()
-#numwdstotal = 0
 uniquewds = []
 for item in contents: #eg AB
     if os.path.isdir(item):
         texts = os.listdir(item)
         for txt in texts: #eg wiki_05
             cleanandsplit(item+"/"+txt,"cleanedwikiwords"+datetime.now().strftime("_%Y%m%d_%H%M%S")+".txt")
-print(str(len(uniquewds))+" unique clean words written")#, of "+str(numwdstotal)+" words total")
+print(str(len(uniquewds))+" unique clean words written")
